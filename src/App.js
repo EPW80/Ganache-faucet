@@ -54,7 +54,7 @@ function App() {
                 className="button is-small is-rounded"
                 onClick={() =>
                   web3Api.provider.request({ method: "eth_requestAccounts" }
-                  )}
+                )}
 
               >
                 Connect Metamask Wallet
