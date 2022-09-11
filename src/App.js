@@ -16,6 +16,7 @@ function App() {
       const provider = await detectEthereumProvider()
 
       if (provider) {
+
         setWeb3Api({
           web3: new Web3(provider),
           provider
@@ -30,7 +31,6 @@ function App() {
     loadProvider()
   }, [])
 
-  console.log(web3Api.web3)
   useEffect(() => {
     const getAccount = async () => {
       const accounts = await web3Api.web3.eth.getAccounts()
@@ -44,17 +44,32 @@ function App() {
     <>
       <div className="faucet-wrapper">
         <div className="faucet">
-          <span>
-            <strong>Account: </strong>
-          </span>
-          <h1>
-            {account ? account : "not connected"}
-          </h1>
-          <div className="balance-view is-size-2">
-            Current Balance: <strong>1</strong> ETH
+          <div className="is-flex is-align-items-center">
+            <span>
+              <strong className="mr-2">Account: </strong>
+            </span>
+            { account ?
+              <div>{account}</div> :
+              <button
+                className="button is-small is-rounded"
+                onClick={() =>
+                  web3Api.provider.request({ method: "eth_requestAccounts" }
+                  )}
+
+              >
+                Connect Metamask Wallet
+
+              </button>
+
+            }
           </div>
-          <button className="btn mr-2">Donate</button>
-          <button className="btn">Withdraw</button>
+          <div className="balance-view is-size-2 mb-4">
+            Current Balance: <strong>10</strong> ETH
+          </div>
+          <button 
+            className="button is-primary is-light is-rounded mr-2">Donate</button>
+          <button 
+            className="button is-link is-light is-rounded">Withdraw</button>
         </div>
       </div>
     </>
