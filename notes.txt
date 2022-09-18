@@ -1,0 +1,15 @@
+60 80 60 40 52 34 80 15 61 00 10 57 60 00 80 fd // Hex
+
+// STACK
+
+0x0f // stack[0]
+0x01 // stack[1]
+0x00 // stack[2]
+
+// MEMORY
+Memory[0x40] = 0x80 // Free memory pointer
+
+web3.js: is a collectioon of libraries that allow you to intereact with a local or remote ethereum node.
+
+blockchain link:
+https://andersbrownworth.com/blockchain/blockchain
