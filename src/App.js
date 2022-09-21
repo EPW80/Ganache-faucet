@@ -88,7 +88,7 @@ function App() {
               { account ?
                 <div>{account}</div> :
                 <button
-                  className="button is-small"
+                  className="button is-small is-rounded"
                   onClick={() =>
                     web3Api.provider.request({method: "eth_requestAccounts"}
                   )}
@@ -97,17 +97,17 @@ function App() {
                 </button>
               }
           </div>
-          <div className="balance-view is-size-2 my-4">
+          <div className="balance-view is-size-2 mb-4">
             Current Balance: <strong>{balance}</strong> ETH
           </div>
           <button
             onClick={addFunds}
-            className="button is-link mr-2">
+            className="button is-primary is-light is-rounded mr-2">
               Donate 1eth
             </button>
           <button
             onClick={withdraw}
-            className="button is-primary">Withdraw</button>
+            className="button is-link is-light is-rounded">Withdraw</button>
         </div>
       </div>
     </>
