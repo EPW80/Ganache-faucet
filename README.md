@@ -14,7 +14,7 @@ React: is a JavaScript library for building user interfaces. In this project, Re
 Features:
 Single-page application for seamless user experience.
 Component-based structure for easy maintainability.
-Utilized React Hooks for state management and side-effects.
+Utilized React Hooks for state management and side effects.
 
 Truffle: is a development environment, testing framework, and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier.
 
