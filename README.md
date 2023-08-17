@@ -42,7 +42,7 @@ npm install
 ```
 
 Start Ganache:
-Launch Ganache UI and create a new workspace (if needed).
+- Launch Ganache UI and create a new workspace (if needed).
 
 Compile and deploy smart contracts using Truffle:  
 ```
@@ -51,7 +51,8 @@ truffle migrate --reset
 ```
 
 Connect MetaMask to Ganache:
--In MetaMask, connect to the custom RPC using the URL provided by Ganache. Import an account using the private key from Ganache.
+- In MetaMask, connect to the custom RPC using the URL provided by Ganache. 
+- Import an account using the private key from Ganache.
 
 Run the React app:
 ```
